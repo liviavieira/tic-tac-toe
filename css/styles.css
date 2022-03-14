@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
+
+header {
+  padding: 2rem 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* buttons */
+#btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#btn-container button {
+  margin: 0 .8rem;
+  padding: 10px 25px;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 0 5px #ccc;
+}
+
+/* hash */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  width: 300px;
+}
+
+.box {
+  flex: 1 1 33%;
+  padding: 10px;
+  height: 100px;
+  text-align: center;
+  border: 5px solid;
+  user-select: none;
+}
+
+.box:nth-child(-n+3) {
+  border-top: none;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(n+7) {
+  border-bottom: none;
+}
+
+.box:nth-child(3n+1) {
+  border-left: none;
+}
+
+/* symbols */
+.x {
+  display: inline-block;
+  width: 100%;
+  color: red;
+  font-size: 3.6em;
+  line-height: 70px;
+}
+
+.o {
+  display: inline-block;
+  margin-top: 8px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid green;
+  border-radius: 50%;
+}
+
+/* scoreboard */
+#scoreboard-container {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 2rem;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+#x-score {
+  margin-right: 3px;
+  color: red;
+}
+
+#o-score {
+  display: inline-block;
+  margin-right: 3px;
+  width: 18px;
+  height: 18px;
+  color: red;
+  border: 2px solid green;
+  border-radius: 50%;
+}
+
+#message p {
+  position: absolute;
+  margin: 0 auto;
+  top: 130px;
+  right: 0;
+  left: 0;
+  padding: 20px;
+  max-width: 600px;
+  color: #fff;
+  font-size: 2.5em;
+  text-align: center;
+  background: #000;
+}
