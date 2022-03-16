@@ -166,7 +166,7 @@ function checkWinCondition() {
     }
   }
   if(counter == 9) {
-    declareWinner('velha')
+    declareWinner('velha');
   }
 }
 
@@ -189,4 +189,18 @@ function declareWinner(winner) {
   // displays the message
   msgText.innerHTML = msg;
   msgContainer.classList.remove('hide');
+
+  // hides the message
+  setTimeout(function() {
+    msgContainer.classList.add('hide');
+  }, 3000)
+
+  // clear the moves
+  player1 = 0;
+  player2 = 0;
+  let boxesToRemove = document.querySelectorAll('.box div');
+
+  for(let i = 0; i < boxesToRemove.length; i++) {
+    boxesToRemove[i].parentNode.removeChild(boxesToRemove[i]);
+  }
 }
